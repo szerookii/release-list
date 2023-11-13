@@ -9,7 +9,10 @@ const config = {
     alias: {
       $lib: "./src/lib"
     },
-    adapter: adapter(),
+    adapter: adapter({
+      pages: "build",
+      assets: "build",
+    })
   },
 };
 
