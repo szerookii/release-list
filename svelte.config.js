@@ -10,8 +10,8 @@ const config = {
       $lib: "./src/lib"
     },
     adapter: adapter({
-      pages: "build",
-      assets: "build",
+      pages: "docs",
+      assets: "docs",
     })
   },
 };
