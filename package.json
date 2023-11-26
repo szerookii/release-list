@@ -29,9 +29,12 @@
     "@sveltejs/adapter-static": "^2.0.3",
     "bits-ui": "^0.9.3",
     "clsx": "^2.0.0",
+    "express": "^4.18.2",
+    "express-es6-template-engine": "^2.2.3",
     "lucide-svelte": "^0.292.0",
     "mode-watcher": "^0.0.7",
     "shadcn-svelte": "^0.3.6",
+    "sirv": "^2.0.3",
     "tailwind-merge": "^2.0.0",
     "tailwind-variants": "^0.1.18"
   }
