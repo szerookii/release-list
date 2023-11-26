@@ -15,7 +15,7 @@ const PUBLIC_DIR = resolve(__dirname, 'build');
 const app = express();
 
 console.log('Building project...');
-execSync('npm run build');
+execSync('npm run build', { stdio: 'inherit' });
 
 app.engine('html', es6Renderer);
 app.set('views', PUBLIC_DIR);
