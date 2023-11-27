@@ -12,11 +12,14 @@
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
       >© {new Date().getFullYear()} Kirigiri's. All Rights Reserved.
     </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0"
-    >
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
       <li>
-        <Button on:click={toggleMode} variant="ghost" size="icon" class="text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-transparent">
+        <Button
+          on:click={toggleMode}
+          variant="ghost"
+          size="icon"
+          class="text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-transparent"
+        >
           <Sun
             class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
           />

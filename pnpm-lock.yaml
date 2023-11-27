@@ -8,6 +8,9 @@ dependencies:
   '@sveltejs/adapter-static':
     specifier: ^2.0.3
     version: 2.0.3(@sveltejs/kit@1.20.4)
+  '@tanstack/svelte-query':
+    specifier: ^5.8.7
+    version: 5.8.7(svelte@4.0.5)
   bits-ui:
     specifier: ^0.9.3
     version: 0.9.3(svelte@4.0.5)
@@ -451,6 +454,19 @@ packages:
     resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
     dependencies:
       tslib: 2.4.1
+    dev: false
+
+  /@tanstack/query-core@5.8.7:
+    resolution: {integrity: sha512-58xOSkxxZK4SGQ/uzX8MDZHLGZCkxlgkPxnfhxUOL2uchnNHyay2UVcR3mQNMgaMwH1e2l+0n+zfS7+UJ/MAJw==}
+    dev: false
+
+  /@tanstack/svelte-query@5.8.7(svelte@4.0.5):
+    resolution: {integrity: sha512-KzilehNQQO4wxxucEy1NJMo0q/NZ0nhrq5TX5MNzklsu0QZ5x+Hn5x7DVox4uKazkCuro1S7PhGEAwFQnHTuwQ==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@tanstack/query-core': 5.8.7
+      svelte: 4.0.5
     dev: false
 
   /@types/cookie@0.5.1:
