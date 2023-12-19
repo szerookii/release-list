@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Badge from "$lib/components/ui/badge/badge.svelte";
   import type { Release } from "$lib/config/release";
   import { siteConfig } from "$lib/config/site";
   import { jsonFetch } from "$lib/utils/fetch";
@@ -9,6 +10,23 @@
     queryFn: () => jsonFetch<Release[]>("/releases.json"),
     refetchInterval: 5000,
   });
+
+  function extractNameAndVersion(
+    text: string,
+  ): { name: string; version: string } | null {
+    const regex = /^(.+)\s+\(([^)]+)\)$/;
+
+    const match = text.match(regex);
+
+    if (match) {
+      const name = match[1].trim();
+      const version = match[2].trim();
+
+      return { name, version };
+    } else {
+      return null;
+    }
+  }
 </script>
 
 <div
@@ -31,7 +49,12 @@
               class="rounded-lg aspect-video w-72"
               aria-hidden="true"
             />
-            <p class="text-xl font-bold pt-4">{release.name}</p>
+            <p class="text-xl font-bold pt-4">
+              {extractNameAndVersion(release.name)?.name || 'Unknown'}
+              <Badge class="bg-[orchid]"
+                >{extractNameAndVersion(release.name)?.version || 'Unknown'}</Badge
+              >
+            </p>
           </a>
         {/each}
       {:else if $releases.isLoading}
